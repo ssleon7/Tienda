@@ -1,0 +1,139 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema Tienda
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema Tienda
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `Tienda` DEFAULT CHARACTER SET utf8 ;
+USE `Tienda` ;
+
+-- -----------------------------------------------------
+-- Table `Tienda`.`usuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Tienda`.`usuario` (
+  `iduser` INT NOT NULL AUTO_INCREMENT,
+  `nombre_usuario` VARCHAR(45) NULL,
+  `apellido_ususario` VARCHAR(45) NULL,
+  `cedula_usuario` BIGINT(20) NULL,
+  `correo_usuario` VARCHAR(45) NULL,
+  `contraseña_usuario` VARCHAR(45) NULL,
+  `usuario` VARCHAR(45) NULL,
+  PRIMARY KEY (`iduser`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Tienda`.`proveedores`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Tienda`.`proveedores` (
+  `idproveedores` INT NOT NULL AUTO_INCREMENT,
+  `nit_proveedor` BIGINT(20) NULL,
+  `ciudad_proveedor` VARCHAR(45) NULL,
+  `direccion_proveedor` VARCHAR(45) NULL,
+  `nombre_proveedor` VARCHAR(45) NULL,
+  `telefono_proveedor` VARCHAR(45) NULL,
+  PRIMARY KEY (`idproveedores`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Tienda`.`producto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Tienda`.`producto` (
+  `idproducto` INT NOT NULL AUTO_INCREMENT,
+  `codigo_producto` BIGINT(20) NOT NULL,
+  `nombre_producto` VARCHAR(50) NULL,
+  `Nitproveedor` BIGINT(20) NOT NULL,
+  `precio_compra` DOUBLE NOT NULL,
+  `Ivacompra` DOUBLE NOT NULL,
+  `precio_venta` DOUBLE NOT NULL,
+  `proveedores_idproveedores` INT NOT NULL,
+  PRIMARY KEY (`idproducto`),
+  INDEX `fk_producto_proveedores1_idx` (`proveedores_idproveedores` ASC) VISIBLE,
+  CONSTRAINT `fk_producto_proveedores1`
+    FOREIGN KEY (`proveedores_idproveedores`)
+    REFERENCES `Tienda`.`proveedores` (`idproveedores`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Tienda`.`clientes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Tienda`.`clientes` (
+  `idclientes` INT NOT NULL AUTO_INCREMENT,
+  `cedula_cliente` BIGINT(20) NULL,
+  `direccion_cliente` VARCHAR(45) NULL,
+  `correo_cliente` VARCHAR(45) NULL,
+  `nombre_cliente` VARCHAR(45) NULL,
+  `telefono_cliente` VARCHAR(45) NULL,
+  PRIMARY KEY (`idclientes`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Tienda`.`ventas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Tienda`.`ventas` (
+  `idventas` INT NOT NULL AUTO_INCREMENT,
+  `codigo_venta` BIGINT(20) NOT NULL,
+  `iva_venta` DOUBLE NOT NULL,
+  `total_venta` DOUBLE NOT NULL,
+  `valor_venta` DOUBLE NOT NULL,
+  `clientes_idclientes` INT NOT NULL,
+  `usuario_iduser` INT NOT NULL,
+  PRIMARY KEY (`idventas`),
+  INDEX `fk_ventas_clientes_idx` (`clientes_idclientes` ASC) VISIBLE,
+  INDEX `fk_ventas_usuario1_idx` (`usuario_iduser` ASC) VISIBLE,
+  CONSTRAINT `fk_ventas_clientes`
+    FOREIGN KEY (`clientes_idclientes`)
+    REFERENCES `Tienda`.`clientes` (`idclientes`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ventas_usuario1`
+    FOREIGN KEY (`usuario_iduser`)
+    REFERENCES `Tienda`.`usuario` (`iduser`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Tienda`.`detalle_venta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Tienda`.`detalle_venta` (
+  `iddetalle_venta` INT NOT NULL AUTO_INCREMENT,
+  `codigo_detalle_venta` BIGINT(20) NOT NULL,
+  `valor_total` DOUBLE NOT NULL,
+  `valor_venta` DOUBLE NOT NULL,
+  `valor_iva` DOUBLE NOT NULL,
+  `ventas_idventas` INT NOT NULL,
+  `producto_idproducto` INT NOT NULL,
+  `cantidad_producto` INT(11) NOT NULL,
+  PRIMARY KEY (`iddetalle_venta`),
+  INDEX `fk_detalle_venta_ventas1_idx` (`ventas_idventas` ASC) VISIBLE,
+  INDEX `fk_detalle_venta_producto1_idx` (`producto_idproducto` ASC) VISIBLE,
+  CONSTRAINT `fk_detalle_venta_ventas1`
+    FOREIGN KEY (`ventas_idventas`)
+    REFERENCES `Tienda`.`ventas` (`idventas`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_detalle_venta_producto1`
+    FOREIGN KEY (`producto_idproducto`)
+    REFERENCES `Tienda`.`producto` (`idproducto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
