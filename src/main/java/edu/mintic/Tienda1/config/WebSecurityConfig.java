@@ -9,9 +9,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import edu.mintic.Tienda1.service.UserDetailsServiceImpl;
+
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{/*
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     String[] resources = new String[]{
         "/include/**","/css/**","/img/**","/js/**"
     };
@@ -55,5 +57,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{/*
  
  
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());     
-    }*/
+    }
 }

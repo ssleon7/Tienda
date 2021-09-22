@@ -18,7 +18,19 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long iduser;
+
+	@Column
+	private String nombre_usuario; 
+
+	@Column
+	private String apellido_usuario;
+
+	@Column
+	private Integer cedula_usuario;
+
+	@Column
+	private String correo_usuario;
 
 	@Column
 	private String username;
@@ -33,13 +45,45 @@ public class User {
 	@JoinTable(name = "authorities_users", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "authority_id"))
 	private Set<Authority> authority;
 
-	public Long getId() {
-		return id;
+	public long getId() {
+		return iduser;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIduser(long iduser) {
+		this.iduser = iduser;
 	}
+
+	public String getNombre_usuario() {
+		return nombre_usuario;
+	}
+
+	public void setNombre_usuario(String nombre_usuario) {
+		this.nombre_usuario = nombre_usuario;
+	}
+	public String getApellido_usuario() {
+		return apellido_usuario;
+	}
+
+	public void setApellido_usuario(String apellido_usuario) {
+		this.apellido_usuario = apellido_usuario;
+	}
+	public int getCedula_usuario() {
+		return cedula_usuario;
+	}
+
+	public void setCedula_usuario(int cedula_usuario) {
+		this.cedula_usuario = cedula_usuario;
+	}
+
+	public String getCorreo_usuario(){
+		return correo_usuario;
+	}
+
+	public void setCorreo_usuario(String correo_usuario){
+		this.correo_usuario = correo_usuario;
+	}
+
+
 
 	public String getUsername() {
 		return username;
@@ -77,7 +121,7 @@ public class User {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((iduser== null) ? 0 : iduser.hashCode());
 		return result;
 	}
 
@@ -90,16 +134,17 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (id == null) {
-			if (other.id != null)
+		if (iduser== null) {
+			if (other.iduser!= null)
 				return false;
-		} else if (!id.equals(other.id))
+		} else if (!iduser.equals(other.iduser))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
+		return "User [iduser=" + iduser+ ", nombre_usuario=" + nombre_usuario + ", apellido_usuario=" + apellido_usuario + ", cedula_usuario=" + cedula_usuario + ", correo_usuario=" + correo_usuario + ", username=" + username + ", password=" + password + "]";
 	}
 }
+                                                                                            
