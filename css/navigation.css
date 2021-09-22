@@ -1,0 +1,13 @@
+.header {
+    background-color: var(--dark-primary);
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header__content--menu-btn {
+    margin-right: 16px;
+}

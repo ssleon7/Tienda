@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Formulario Login</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
-    <section class="form-login">
-        <h5>Bienvenidos a la Tienda Genérica</h5>
-        <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
-        <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
-        <input class="buttons" type="submit" name="" value="Ingresar">
-        <p><a href="#">¿Olvidaste la contraseña>:v?</a></p>
-    </section>
-
+    <div class="bg-img"></div>
+    <div class="center-content-column">
+        <div class="form-container">
+            <form>
+                <h1 class="form-title">Bienvenidos a Tienda Genérica</h1>
+                <div class="input-container">
+                    <label for="email" class="input-container__label">Correo electrónico</label>
+                    <input type="email" class="input-container__input" id="email" name="email" />
+                </div>
+                <div class="input-container">
+                    <label for="pass" class="input-container__label">Contraseña</label>
+                    <input type="password" class="input-container__input" id="pass" name="pass" />
+                </div>
+                <button type="submit" class="primary-btn">Iniciar sesión</button>
+            </form>
+            <div class="bottom-actions">
+                <a href="#" class="bottom-actions__link">¿Olvidaste la contraseña?</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
