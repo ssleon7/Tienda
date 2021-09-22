@@ -1,24 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import url("buttons.css");
 @import url("navigation.css");
-:root {
-    /*COLORES*/
-    --primary: #017bab;
-    --dark-primary: #014965;
-    --light-primary: #43caff;
-    --custom-gray: #666666;
-    --light-gray: #b3b3b3;
-    --dark-gray: #4d4d4d;
-    --custom-dark-gray: #4e4d4d;
-    --custom-black: #252323;
-    --red: #DC002B;
-    --light-red: #ff7979;
-    --dark-red: #920007;
-    /*SOMBRAS*/
-    --sombra: 0 10px 20px hsla(0, 0%, 0%, 0.15), 0 3px 6px hsla(0, 0%, 0%, 0.1);
-    /*TRANSICIONES*/
-    --transition-1: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
-    --simple-transition: all .4s ease-in;
+@import url("variables.css");
+body {
+    background-color: var(--bg-gray);
 }
 
 .bg-img {
@@ -65,6 +50,16 @@ input {
     color: white;
 }
 
+.register-form {
+    background-color: white;
+    border-radius: 0 0 6px 6px;
+    box-shadow: var(--sombra);
+    padding: 20px 30px;
+    border-top: 4px solid var(--dark-primary);
+    color: var(--custom-black);
+    margin-top: 24px;
+}
+
 .form-title,
 .input-container {
     margin-bottom: 24px;
@@ -91,6 +86,13 @@ input {
     margin-bottom: 5px;
 }
 
+.register-form .input-container__input {
+    border: 1px solid var(--primary);
+    background-color: white;
+    color: var(--custom-black);
+    font-size: 16px;
+}
+
 .input-container__input {
     padding: 10px 16px;
     border-radius: 4px;
@@ -100,11 +102,16 @@ input {
     font-size: 16px;
 }
 
+.header-back-button__link {
+    display: flex;
+    align-items: center;
+}
+
 .header-back-button__link,
 .bottom-actions__link {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     transition: var(--simple-transition);
 }
 

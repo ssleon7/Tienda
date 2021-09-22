@@ -1,5 +1,14 @@
 .header {
-    background-color: var(--dark-primary);
+    background: var(--gradient-primary);
+    box-shadow: var(--sombra);
+}
+
+.header__container {
+    padding: 14px 0 !important;
+}
+
+.header__content--menu-btn:hover {
+    cursor: pointer;
 }
 
 .header__content {
@@ -9,5 +18,82 @@
 }
 
 .header__content--menu-btn {
-    margin-right: 16px;
+    margin: 5px 16px 0 0;
+}
+
+
+/*Menu*/
+
+#open_menu {
+    display: none;
+}
+
+.menu-container {
+    position: absolute;
+    background: var(--black-opacity);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: var(--simple-transition);
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* Boton de menu*/
+
+#open_menu:checked~.menu-container {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Configuracion de menu*/
+
+.menu-content {
+    width: 250px;
+    background: var(--medium-primary);
+    position: relative;
+    transition: var(--transition-2);
+    transform: translateX(-100%);
+    height: 100vh;
+}
+
+#open_menu:checked~.menu-container .menu-content {
+    transform: translateX(0%);
+}
+
+
+/*configuracion de las letras del menu*/
+
+.menu-content__item {
+    display: block;
+    text-decoration: none;
+    padding: 18px;
+    color: var(--custom-black);
+    border-left: 20px solid transparent;
+    transition: var(--simple-transition);
+    font-size: 18px;
+}
+
+
+/* Seleccionar Menu */
+
+.menu-content__item:hover {
+    border-left: 5px solid var(--light-primary);
+    background: var(--light-primary);
+}
+
+
+/* La salir de menu "X" */
+
+.menu-content__close {
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
 }

@@ -5,38 +5,33 @@
     <meta charset="UTF-8">
     <title>Menu</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleUsu.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="bg-img"></div>
-
     <header class="header">
         <div class="header__container">
             <div class="header__content">
                 <label class="header__content--menu-btn" for="open_menu"><span class="material-icons">menu</span></label>
-                <h1 class="header__content--title">Tienda generica</h1>
+                <h1 class="header__content--title">Tienda genérica</h1>
             </div>
         </div>
     </header>
-
-    <input type="checkbox" id="open_menu">
-    <div class="container-menu">
-        <div class="cont-menu">
+    <input type="checkbox" id="open_menu" hidden>
+    <div class="menu-container">
+        <div class="menu-content">
+            <label for="open_menu" class="menu-content__close"><span class="material-icons">close</span></label>
             <nav>
-                <a href="file:///C:/Users/ktaa5/Desktop/Min%20Tic/Ciclo%203/Menu/MenUsuarios.html">Usuarios</a>
-                <a href="#">Clientes</a>
-                <a href="#">Proveedores</a>
-                <a href="#">Productos</a>
-                <a href="#">Ventas</a>
-                <a href="#">Reportes</a>
+                <a class="menu-content__item" href="MenUsuarios.html">Usuarios</a>
+                <a class="menu-content__item" href="#">Clientes</a>
+                <a class="menu-content__item" href="#">Proveedores</a>
+                <a class="menu-content__item" href="#">Productos</a>
+                <a class="menu-content__item" href="#">Ventas</a>
+                <a class="menu-content__item" href="#">Reportes</a>
+                <a class="menu-content__item" href="login.html">Cerrar sesión</a>
             </nav>
-            <label for="open_menu">✖️</label>
         </div>
     </div>
-
-
 
 </body>
 
