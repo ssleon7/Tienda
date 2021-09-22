@@ -1,0 +1,98 @@
+button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 6px 26px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    margin-right: 24px;
+    white-space: nowrap;
+    width: fit-content;
+    transition: var(--transition-1);
+}
+
+button:last-child,
+button:last-of-type {
+    margin-right: 0;
+}
+
+.primary-btn {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: var(--dark-primary);
+    border: 1px solid var(--dark-primary);
+    color: white;
+    box-shadow: 0 0 4px 2px var(--light-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cancel-btn:disabled,
+.primary-btn:disabled {
+    box-shadow: none;
+    background-color: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    color: var(--custom-dark-gray);
+}
+
+.cancel-btn:disabled,
+.primary-btn:disabled:hover {
+    cursor: inherit;
+}
+
+.primary-btn:not(:disabled):not(.disabled):focus,
+.primary-btn:not(:disabled):not(.disabled).focus,
+.primary-btn:focus {
+    box-shadow: 0 0 3px 1px var(--primary);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.primary-btn:not(:disabled):not(.disabled):active,
+.primary-btn:not(:disabled):not(.disabled).active,
+.primary-btn:active {
+    background-color: var(--primary);
+    box-shadow: 0 0 4px 2px var(--light-primary);
+    border: 1px solid var(--primary);
+}
+
+.cancel-btn {
+    background-color: var(--light-red);
+    border: 1px solid var(--light-red);
+    color: var(--dark-red);
+}
+
+.cancel-btn:hover {
+    background-color: var(--dark-red);
+    border: 1px solid var(--dark-red);
+    color: white;
+    box-shadow: 0 0 4px 2px var(--light-red);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cancel-btn:not(:disabled):not(.disabled):focus,
+.cancel-btn:not(:disabled):not(.disabled).focus,
+.cancel-btn:focus {
+    box-shadow: 0 0 3px 1px var(--light-red);
+    background-color: var(--red);
+    border: 1px solid var(--red);
+}
+
+.cancel-btn:not(:disabled):not(.disabled):active,
+.cancel-btn:not(:disabled):not(.disabled).active,
+.cancel-btn:active {
+    background-color: var(--red);
+    box-shadow: 0 0 4px 2px var(--light-red);
+    border: 1px solid var(--red);
+}

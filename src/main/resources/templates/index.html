@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div class="bg-img"></div>
+    <div class="center-content-column">
+        <div class="form-container">
+            <form th:action="@{/login}" method="get">
+                <h1 class="form-title">Bienvenidos a Tienda Genérica</h1>
+                <div class="input-container">
+                    <label for="email" class="input-container__label">Correo electrónico</label>
+                    <input type="email" class="input-container__input" id="email" name="email" />
+                </div>
+                <div class="input-container">
+                    <label for="pass" class="input-container__label">Contraseña</label>
+                    <input type="password" class="input-container__input" id="pass" name="pass" />
+                </div>
+                <button type="submit" class="primary-btn">Iniciar sesión</button>
+            </form>
+            <div class="bottom-actions">
+                <a href="#" class="bottom-actions__link">¿Olvidaste la contraseña?</a>
+            </div>
+            <div th:if="${param.error}" class="alert alert-danger" role="alert">
+                Invalid username and password.
+            </div>
+            <div th:if="${param.logout}" class="alert alert-success" role="alert">
+                You have been logged out.
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

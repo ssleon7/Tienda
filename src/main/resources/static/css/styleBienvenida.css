@@ -1,0 +1,35 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: white;
+ }
+h1 {
+    margin-top: 210px;
+    text-align: center;
+    color: rgb(119, 158, 177);
+    text-align: center;                     
+ }
+h3 {
+    color: rgb(91, 92, 94);
+    text-align: center;
+    
+}
+.button {
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
+    text-align: center;
+    border-radius: 10px;
+    border:slategray;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(153, 163, 173);
+    margin-left: 39em;
+}
+div{
+    color: burlywood;
+    margin: 8px; /*todos los márgenes 8px de ancho*/
+    margin: 8px 12px; /*Margen superior e inferior 8px y laterales a 12px*/
+    margin: 0px auto /*Sin margenes superior e inferior y laterales en auto*/
+  }
