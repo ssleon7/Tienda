@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
-<head>
+<head th:replace="menu :: head">
     <meta charset="UTF-8">
     <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
@@ -12,7 +13,8 @@
     <header class="header">
         <div class="header__container">
             <div class="header__content">
-                <label class="header__content--menu-btn" for="open_menu"><span class="material-icons">menu</span></label>
+                <label class="header__content--menu-btn" for="open_menu"><span
+                        class="material-icons">menu</span></label>
                 <h1 class="header__content--title">Tienda genérica</h1>
             </div>
         </div>
@@ -28,7 +30,11 @@
                 <a class="menu-content__item" href="#">Productos</a>
                 <a class="menu-content__item" href="#">Ventas</a>
                 <a class="menu-content__item" href="#">Reportes</a>
-                <a class="menu-content__item" href="login">Cerrar sesión</a>
+                <!-- <a class="menu-content__item" href="login">Cerrar sesión</a> -->
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Cerrar Sesión" />
+                </form>
+
             </nav>
         </div>
     </div>
