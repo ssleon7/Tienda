@@ -1,4 +1,4 @@
-package edu.mintic.Tienda1.config;
+/*package edu.mintic.Tienda1.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,4 +12,4 @@ public class MvcConfig implements WebMvcConfigurer {
     public BCryptPasswordEncoder passEncoder(){
         return new BCryptPasswordEncoder();
     }
-}
+}*/

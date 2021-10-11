@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+   >
 
-<head th:replace="menu :: head">
+<head>
     <meta charset="UTF-8">
     <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
@@ -30,11 +30,10 @@
                 <a class="menu-content__item" href="#">Productos</a>
                 <a class="menu-content__item" href="#">Ventas</a>
                 <a class="menu-content__item" href="#">Reportes</a>
-                <!-- <a class="menu-content__item" href="login">Cerrar sesión</a> -->
-                <form th:action="@{/logout}" method="post">
+                <a class="menu-content__item" href="login">Cerrar sesión</a>
+                <!-- <form th:action="@{/logout}" method="post">
                     <input type="submit" value="Cerrar Sesión" />
-                </form>
-
+                </form> -->
             </nav>
         </div>
     </div>

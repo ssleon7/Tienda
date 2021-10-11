@@ -1,4 +1,4 @@
-package edu.mintic.Tienda1.config;
+/*package edu.mintic.Tienda1.config;
 
 import javax.sql.DataSource;
 
@@ -41,4 +41,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         .usersByUsernameQuery("select  username,  password, enabled from users where username=?")
         .authoritiesByUsernameQuery("select  u.username, r.rol from roles r inner join users u on r.user_id = u.id_user where  u.username = ?");
     }
-}
+}*/
