@@ -14,6 +14,13 @@ public class MenuController {
     public String user(){
         return "user";
     }
-
+    @GetMapping("/clientes")
+    public String clientes(){
+        return "clientes";
+    }
+    @GetMapping("/proveedores")
+    public String proveedores(){
+        return "proveedores";
+    }
 
 }

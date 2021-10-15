@@ -1,4 +1,4 @@
-/*package edu.mintic.Tienda1.controller;
+package edu.mintic.Tienda1.controller;
 
 import java.util.List;
 
@@ -84,4 +84,3 @@ public class CSVController {
         .body(file);
   }
 }
-*/

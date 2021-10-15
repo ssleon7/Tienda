@@ -1,4 +1,4 @@
-/*package edu.mintic.Tienda1.model.entity;
+package edu.mintic.Tienda1.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -94,4 +94,3 @@ public class Provider {
 
     
 }
-*/
