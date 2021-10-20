@@ -1,4 +1,4 @@
-package edu.mintic.Tienda1.util;
+/*package edu.mintic.Tienda1.util;
 
 public class ResponseMessage {
 
@@ -28,3 +28,4 @@ public class ResponseMessage {
 	}
 
 }
+*/

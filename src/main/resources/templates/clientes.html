@@ -1,31 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <meta charset="UTF-8" />
     <title>Clientes</title>
     <link rel="stylesheet" type="text/css" href="../static/css/estiloscliente.css" th:href="@{/css/estiloscliente.css}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <button class="button button1">Usuario</button>
-    <button class="button button1">Clientes</button>
-    <button class="button button1">Proveedores</button>
-    <button class="button button1">Productos</button>
-    <button class="button button1">Ventas</button>
-    <button class="button button1">Reportes</button>
-    <form>
-        Cédula <input type="number" name="cedula"/>         
-        Teléfono <input type="number" name="telefono"/>
-        <br>
-        Nombre Completo <input type="text" name="nombre_completo"/>
-        Correo Electronico <input type="email" name="Correo"/>
-        <br>
-        Dirección <input type="text" name="direccion"/>
-    </form>
-    <input type="button" value="Consultar">
-    <input type="button" value="Crear">
-    <input type="button" value="Actualizar">
-    <input type="button" value="Borrar">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__content">
+                <div class="header-back-button">
+                    <a href="menu" class="header-back-button__link"><span class="material-icons">
+                            arrow_back_ios
+                        </span>Regresar</a>
+                    <h1>Gestión de clientes</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="register-form" >
+            <h1>Registro de clientes</h1>
+            <p>Complete la siguiente información para realizar la creación de un cliente.</p>
+
+            <form class="inline-form">
+                <div class="input-container">
+                    <label for="cedula" class="input-container__label">Cédula</label>
+                    <input type="text" name="cedula" id="cedula" class="input-container__input" />
+                </div>
+                <div class="input-container">
+                    <label for="fullName" class="input-container__label">Nombre completo</label>
+                    <input type="text" name="fullName" id="fullName" class="input-container__input" />
+                </div>
+                <div class="input-container">
+                    <label for="userEmail" class="input-container__label">Correo electrónico
+                    </label>
+                    <input type="text" name="userEmail" id="userEmail" class="input-container__input" />
+                </div>
+                <div class="input-container">
+                    <label for="tel" class="input-container__label">Teléfono </label>
+                    <input type="text" name="tel" id="tel" class="input-container__input" />
+                </div>
+                <div class="input-container">
+                    <label for="direccion" class="input-container__label">Dirección </label>
+                    <input type="text" name="direccion" id="direccion" class="input-container__input" />
+                </div>
+            </form>
+            <div class="buttons-container">
+                <button class="primary-btn">Consultar</button>
+                <button class="primary-btn">Crear</button>
+                <button class="primary-btn">Actualizar</button>
+                <button class="cancel-btn">Borrar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

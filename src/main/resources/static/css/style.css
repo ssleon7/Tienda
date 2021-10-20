@@ -48,9 +48,10 @@ input {
     padding: 20px 30px;
     border-top: 4px solid var(--primary);
     color: white;
+    
 }
 
-.register-form {
+.register-form {    
     background-color: white;
     border-radius: 0 0 6px 6px;
     box-shadow: var(--sombra);
@@ -58,6 +59,10 @@ input {
     border-top: 4px solid var(--dark-primary);
     color: var(--custom-black);
     margin-top: 24px;
+}
+
+.register-form .input-container {
+    max-width: 200px;
 }
 
 .form-title,
@@ -87,6 +92,7 @@ input {
 }
 
 .register-form .input-container__input {
+    
     border: 1px solid var(--primary);
     background-color: white;
     color: var(--custom-black);
