@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>MenUsuaios</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Proveedores</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
@@ -13,79 +13,82 @@
         <div class="header__container">
             <div class="header__content">
                 <div class="header-back-button">
-                    <a href="menu" class="header-back-button__link"><span class="material-icons">
-                        arrow_back_ios
-                        </span>Regresar</a>
-                    <h1>Gestión de proveedores</h1>
-                </div>
-            </div>
+                    <a href="menu" class="header-back-button__link"><span class="material-icons"> arrow_back_ios </span>Menú
+              principal</a
+            >
+            <h1>Gestión de proveedores</h1>
+          </div>
         </div>
+      </div>
     </header>
     <div class="main-container">
-        <div class="register-form">
-            <h1>Registro</h1>
-            <p>Cargue el archivo .csv para realizar el registro de proveedores</p>
+      <div class="register-form">
+        <h1>Registro</h1>
+        <p>Cargue el archivo .csv para realizar el registro de proveedores</p>
 
-            <form class="inline-form" id="singleUploadForm" name="singleUploadForm">             
-                    <input type="file" name="file" id="singleFileUploadInput" class="input-container__label" required />    
-                    <label for="file" class="input-container__label">Selecionar archivo</label>
-                    <div class="buttons-container">
-                        <button class="primary-btn">Registrar</button>            
-                    </div>
-            </form>
-            <div class="upload-response">
-                <div id="singleFileUploadError"></div>
-                <div id="singleFileUploadSuccess"></div>
-            </div>
-            <!-- <div class="buttons-container">
+        <form class="inline-form" id="singleUploadForm" name="singleUploadForm">
+          <input
+            type="file"
+            name="file"
+            id="singleFileUploadInput"
+            class="input-container__label"
+            required
+          />
+          <label for="file" class="input-container__label"
+            >Selecionar archivo</label
+          >
+          <div class="buttons-container">
+            <button class="primary-btn">Registrar</button>
+          </div>
+        </form>
+        <div class="upload-response">
+          <div id="singleFileUploadError"></div>
+          <div id="singleFileUploadSuccess"></div>
+        </div>
+        <!-- <div class="buttons-container">
                 <button class="primary-btn">Registrar</button>            
             </div> -->
-        </div>
+      </div>
     </div>
 
-    <script src="../static/js/csvProviders.js" th:src="@{/js/csvProviders.js}"></script>
+    <script
+      src="../static/js/csvProviders.js"
+      th:src="@{/js/csvProviders.js}"
+    ></script>
     <script>
-        var singleUploadForm = document.querySelector('#singleUploadForm');
-        var singleFileUploadInput = document.querySelector('#singleFileUploadInput');
-        var singleFileUploadError = document.querySelector('#singleFileUploadError');
-        var singleFileUploadSuccess = document.querySelector('#singleFileUploadSuccess');
+      var singleUploadForm = document.querySelector("#singleUploadForm");
+      var singleFileUploadInput = document.querySelector(
+        "#singleFileUploadInput"
+      );
+      var singleFileUploadError = document.querySelector(
+        "#singleFileUploadError"
+      );
+      var singleFileUploadSuccess = document.querySelector(
+        "#singleFileUploadSuccess"
+      );
 
+      function uploadSingleFile(file) {
+        var formData = new FormData();
+        formData.append("file", file);
 
-        function uploadSingleFile(file) {
-            var formData = new FormData();
-            formData.append("file", file);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/api/csv/upload");
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/api/csv/upload");
-
-            xhr.onload = function () {
-                console.log(xhr.responseText);
-                var response = JSON.parse(xhr.responseText);
-                if (xhr.status == 200) {
-                    singleFileUploadError.style.display = "none";
-                    singleFileUploadSuccess.innerHTML = "<p>File Uploaded Successfully.</p><p>DownloadUrl : <a href='" + response.fileDownloadUri + "' target='_blank'>" + response.fileDownloadUri + "</a></p>";
-                    singleFileUploadSuccess.style.display = "block";
-                } else {
-                    singleFileUploadSuccess.style.display = "none";
-                    singleFileUploadError.innerHTML = "<p>" + (response && response.message) + "<p>" || "Some Error Occurred";
-                    singleFileUploadSuccess.style.display = "block";
-
-                }
-            }
-
-            xhr.send(formData);
-        }
-
-        singleUploadForm.addEventListener('submit', function (event) {
-            var files = singleFileUploadInput.files;
-            if (files.length === 0) {
-                singleFileUploadError.innerHTML = "Please select a file";
-                singleFileUploadError.style.display = "block";
-            }
-            uploadSingleFile(files[0]);
-            event.preventDefault();
-        }, true);
-    </script>
+        xhr.onload = function () {
+          console.log(xhr.responseText);
+          var response = JSON.parse(xhr.responseText);
+          if (xhr.status == 200) {
+            singleFileUploadError.style.display = "none";
+            singleFileUploadSuccess.innerHTML =
+              "<p>File Uploaded Successfully.</p><p>DownloadUrl : <a href='" +
+              response.fileDownloadUri +
+              "' target='_blank'>" +
+              response.fileDownloadUri +
+              "</a></p>"; singleFileUploadSuccess.style.display = "block"; } else { singleFileUploadSuccess.style.display = "none"; singleFileUploadError.innerHTML = "
+                    <p>" + (response && response.message) + "
+                        <p>" || "Some Error Occurred"; singleFileUploadSuccess.style.display = "block"; } }; xhr.send(formData); } singleUploadForm.addEventListener( "submit", function (event) { var files = singleFileUploadInput.files; if (files.length ===
+                            0) { singleFileUploadError.innerHTML = "Please select a file"; singleFileUploadError.style.display = "block"; } uploadSingleFile(files[0]); event.preventDefault(); }, true );
+                            </script>
 </body>
 
 </html>

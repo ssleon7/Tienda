@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>MenUsuaios</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Ventas</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
@@ -13,131 +13,230 @@
         <div class="header__container">
             <div class="header__content">
                 <div class="header-back-button">
-                    <a href="menu" class="header-back-button__link"><span class="material-icons">
-                            arrow_back_ios
-                        </span>Regresar</a>
-                    <h1></h1>
-                </div>
-            </div>
+                    <a href="menu" class="header-back-button__link"><span class="material-icons"> arrow_back_ios </span>Menú
+              principal</a
+            >
+            <h1></h1>
+          </div>
         </div>
+      </div>
     </header>
     <div class="main-container">
-        <div class="register-form">
-            <h1>Ventas</h1>
-            <p>Complete los siguientes campos junto con los productos que desea comprar.</p>
+      <div class="register-form">
+        <h1>Ventas</h1>
+        <p>
+          Complete los siguientes campos junto con los productos que desea
+          comprar.
+        </p>
 
-            <form class="inline-form">
-                <div class="" style="margin-right: 10px;">
-                    <label for="cedula" class="input-container__label">Cédula</label>
-                    <input type="text" name="cedula" id="cedula" class="input-container__input" />    
-                    <button class="primary-btn">Consultar</button>                
-                </div>     
-                <div class="" style="margin-right: 10px;">
-                    <label for="cliente" class="input-container__label">Cliente</label>
-                    <input type="text" name="cliente" id="cliente" class="input-container__input" />
-                </div>
-                <div style="margin-right: 10px;">
-                    <label for="consec" class="input-container__label">Consec.
-                    </label>
-                    <input type="text" name="consec" id="consec" class="input-container__input" />
-                </div>
+        <form class="inline-form">
+          <div class="" style="margin-right: 10px">
+            <label for="cedula" class="input-container__label">Cédula</label>
+            <input
+              type="text"
+              name="cedula"
+              id="cedula"
+              class="input-container__input"
+            />
+            <button class="primary-btn">Consultar</button>
+          </div>
+          <div class="" style="margin-right: 10px">
+            <label for="cliente" class="input-container__label">Cliente</label>
+            <input
+              type="text"
+              name="cliente"
+              id="cliente"
+              class="input-container__input"
+            />
+          </div>
+          <div style="margin-right: 10px">
+            <label for="consec" class="input-container__label">Consec. </label>
+            <input
+              type="text"
+              name="consec"
+              id="consec"
+              class="input-container__input"
+            />
+          </div>
 
-                <div class="input-container" style="width: 160px; margin-left: 80px; margin-top: 20px;">
-                    <label for="codProducto" class="input-container__label">Cod.Producto </label>
-                    <input type="text" name="codProducto" id="codProducto" class="input-container__input" />
-                    
-                </div>
-                <div class="input-container" style="width: 110px;   margin-top: 20px;">
-                    <label for="codProducto" class="input-container__label" style="color: white;" >Cod. </label>
-                    <button class="primary-btn">Consultar</button>                    
-                </div>
-                <div class="input-container" style=" margin-top: 20px;"> 
-                    <label for="nomProducto" class="input-container__label"  >Nombre Producto </label>
-                    <input type="text" name="codProducto" id="nomProducto" class="input-container__input" />              
-                </div>
-                
-                
-                <div class="input-container" style="width:  80px; margin-top: 20px;">
-                    <label for="cant" class="input-container__label" >Cant </label>
-                    <input type="num" name="cant" id="cant" class="input-container__input"  />
-                </div>
-                <div class="input-container" style="margin-top: 20px;">
-                    <label for="valTotal" class="input-container__label">Valor Total </label>
-                    <input type="text" name="valTotal" id="valTotal" class="input-container__input" />
-                </div>
+          <div
+            class="input-container"
+            style="width: 160px; margin-left: 80px; margin-top: 20px"
+          >
+            <label for="codProducto" class="input-container__label"
+              >Cod.Producto
+            </label>
+            <input
+              type="text"
+              name="codProducto"
+              id="codProducto"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container" style="width: 110px; margin-top: 20px">
+            <label
+              for="codProducto"
+              class="input-container__label"
+              style="color: white"
+              >Cod.
+            </label>
+            <button class="primary-btn">Consultar</button>
+          </div>
+          <div class="input-container" style="margin-top: 20px">
+            <label for="nomProducto" class="input-container__label"
+              >Nombre Producto
+            </label>
+            <input
+              type="text"
+              name="codProducto"
+              id="nomProducto"
+              class="input-container__input"
+            />
+          </div>
 
+          <div class="input-container" style="width: 80px; margin-top: 20px">
+            <label for="cant" class="input-container__label">Cant </label>
+            <input
+              type="num"
+              name="cant"
+              id="cant"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container" style="margin-top: 20px">
+            <label for="valTotal" class="input-container__label"
+              >Valor Total
+            </label>
+            <input
+              type="text"
+              name="valTotal"
+              id="valTotal"
+              class="input-container__input"
+            />
+          </div>
 
-                <div class="input-container" style="width: 160px; margin-left: 80px; ">
-                    
-                    <input type="text" name="codProducto" id="codProducto" class="input-container__input" />
-                    
-                </div>
-                <div class="input-container" style="width: 110px;">
-                    <button class="primary-btn">Consultar</button>                    
-                </div>
-                <div class="input-container">
-                    
-                    <input type="text" name="codProducto" id="nomProducto" class="input-container__input" />              
-                </div>
-                
-                
-                <div class="input-container" style="width: 80px;">
-                   
-                    <input type="num" name="cant" id="cant" class="input-container__input"  />
-                </div>
-                <div class="input-container">
-                    
-                    <input type="text" name="valTotal" id="valTotal" class="input-container__input" />
-                </div>
+          <div class="input-container" style="width: 160px; margin-left: 80px">
+            <input
+              type="text"
+              name="codProducto"
+              id="codProducto"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container" style="width: 110px">
+            <button class="primary-btn">Consultar</button>
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              name="codProducto"
+              id="nomProducto"
+              class="input-container__input"
+            />
+          </div>
 
-                <div class="input-container" style="width: 160px; margin-left: 80px;">
-                    
-                    <input type="text" name="codProducto" id="codProducto" class="input-container__input" />
-                    
-                </div>
-                <div class="input-container" style="width: 110px;">
-                   
-                    <button class="primary-btn">Consultar</button>                    
-                </div>
-                <div class="input-container">
-                    
-                    <input type="text" name="codProducto" id="nomProducto" class="input-container__input" />              
-                </div>
-                
-                
-                <div class="input-container" style="width: 80px;">
-                    
-                    <input type="num" name="cant" id="cant" class="input-container__input"  />
-                </div>
-                <div class="input-container">
-                   
-                    <input type="text" name="valTotal" id="valTotal" class="input-container__input" />
-                </div>
+          <div class="input-container" style="width: 80px">
+            <input
+              type="num"
+              name="cant"
+              id="cant"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              name="valTotal"
+              id="valTotal"
+              class="input-container__input"
+            />
+          </div>
 
+          <div class="input-container" style="width: 160px; margin-left: 80px">
+            <input
+              type="text"
+              name="codProducto"
+              id="codProducto"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container" style="width: 110px">
+            <button class="primary-btn">Consultar</button>
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              name="codProducto"
+              id="nomProducto"
+              class="input-container__input"
+            />
+          </div>
 
+          <div class="input-container" style="width: 80px">
+            <input
+              type="num"
+              name="cant"
+              id="cant"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              name="valTotal"
+              id="valTotal"
+              class="input-container__input"
+            />
+          </div>
 
-                <div   style="margin-left: 635px; margin-bottom: 8px; "> 
-                    <label for="pass" class="input-container__label" style="margin-right: 10px;">Total Venta </label>
-                    <input  type="text" name="pass" id="pass" class="input-container__input" />
-                </div>
-                <div   style="margin-left: 650px;margin-bottom: 8px;"> 
-                    <label for="pass" class="input-container__label" style="margin-right: 10px;">Total IVA</label>
-                    <input  type="text" name="pass" id="pass" class="input-container__input" />
-                </div> 
-                <div   style="margin-left: 622px;margin-bottom: 8px;"> 
-                    <label for="pass" class="input-container__label" style="margin-right: 10px;">Total con IVA </label>
-                    <input  type="text" name="pass" id="pass" class="input-container__input" />
-                </div>
-               
-            </form>
-            <div class="buttons-container">
-                <button class="primary-btn">Consultar</button>
-                <button class="cancel-btn">Borrar</button>
-            </div>
+          <div style="margin-left: 635px; margin-bottom: 8px">
+            <label
+              for="pass"
+              class="input-container__label"
+              style="margin-right: 10px"
+              >Total Venta
+            </label>
+            <input
+              type="text"
+              name="pass"
+              id="pass"
+              class="input-container__input"
+            />
+          </div>
+          <div style="margin-left: 650px; margin-bottom: 8px">
+            <label
+              for="pass"
+              class="input-container__label"
+              style="margin-right: 10px"
+              >Total IVA</label
+            >
+            <input
+              type="text"
+              name="pass"
+              id="pass"
+              class="input-container__input"
+            />
+          </div>
+          <div style="margin-left: 622px; margin-bottom: 8px">
+            <label
+              for="pass"
+              class="input-container__label"
+              style="margin-right: 10px"
+              >Total con IVA
+            </label>
+            <input
+              type="text"
+              name="pass"
+              id="pass"
+              class="input-container__input"
+            />
+          </div>
+        </form>
+        <div class="buttons-container">
+          <button class="primary-btn">Consultar</button>
+          <button class="cancel-btn">Borrar</button>
         </div>
+      </div>
     </div>
-
-   
-</body>
-
+  </body>
 </html>

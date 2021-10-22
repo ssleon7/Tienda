@@ -1,0 +1,60 @@
+.tab-title {
+    padding: 10px 42px;
+    color: var(--custom-gray);
+    -webkit-transition: var(--transition-3);
+    -moz-transition: var(--transition-3);
+    -ms-transition: var(--transition-3);
+    -o-transition: var(--transition-3);
+    transition: var(--transition-3);
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: -3px;
+    line-height: 3;
+    border-bottom: transparent;
+    border-radius: 0;
+}
+
+.tab-title:first-of-type {
+    margin-left: 0px;
+}
+
+input:checked+.tab-title,
+.tab-title:hover {
+    background-color: white;
+    color: var(--dark-primary);
+}
+
+.tab-column [type="radio"] {
+    display: none;
+}
+
+input[id="tab-1"]:checked~.tab-content .tab-1,
+input[id="tab-2"]:checked~.tab-content .tab-2,
+input[id="tab-3"]:checked~.tab-content .tab-3 {
+    display: block;
+}
+
+input[id="tab-1"]:checked~.tab-title[for="tab-1"],
+input[id="tab-2"]:checked~.tab-title[for="tab-2"],
+input[id="tab-3"]:checked~.tab-title[for="tab-3"] {
+    color: var(--deep-primary);
+    border: 1px solid var(--primary);
+    border-bottom: 1px solid white;
+    border-radius: 8px 8px 0 0;
+    background-color: var(--primary-opacity);
+}
+
+.tab-column .tab_content {
+    display: none;
+    width: 100%;
+}
+
+.tab-content.custom-container {
+    margin-top: -6px;
+    border: 1px solid var(--primary);
+    padding: 30px 24px 24px 24px;
+}
+
+.tab-description {
+    margin-bottom: 16px;
+}

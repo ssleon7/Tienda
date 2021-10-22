@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>MenUsuaios</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
@@ -13,55 +13,95 @@
         <div class="header__container">
             <div class="header__content">
                 <div class="header-back-button">
-                    <a href="menu" class="header-back-button__link"><span class="material-icons">
-                            arrow_back_ios
-                        </span>Regresar</a>
-                </div>
-            </div>
+                    <a href="menu" class="header-back-button__link"><span class="material-icons"> arrow_back_ios </span>Menú
+              principal</a
+            >
+            <h1>Registro de productos</h1>
+          </div>
         </div>
+      </div>
     </header>
     <div class="main-container">
-        <div class="register-form">
-            <h1>Productos</h1>
-            <p>Complete la siguiente información para realizar el registro de algún producto.</p>
+      <div class="register-form">
+        <h1>Productos</h1>
+        <p>
+          Complete la siguiente información para realizar el registro de algún
+          producto.
+        </p>
 
-            <form class="inline-form">
-                <div class="input-container">
-                    <label for="codigo" class="input-container__label">Código</label>
-                    <input type="text" name="codigo" id="codigo" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="nomProducto" class="input-container__label">Nombre </label>
-                    <input type="text" name="nomProducto" id="nomProducto" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="nitProveedor" class="input-container__label">Nit Proveedor
-                    </label>
-                    <input type="text" name="nitProveedor" id="nitProveedor" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="precioCompra" class="input-container__label">Precio Compra </label>
-                    <input type="text" name="precioCompra" id="precioCompra" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="ivaCompra" class="input-container__label">Iva compra </label>
-                    <input type="text" name="ivaCompra" id="ivaCompra" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="precioVenta" class="input-container__label">Precio Venta</label>
-                    <input type="text" name="precioVenta" id="precioVenta" class="input-container__input" />
-                </div>
-            </form>
-            <div class="buttons-container">
-                <button class="primary-btn">Consultar</button>
-                <button class="primary-btn">Crear</button>
-                <button class="primary-btn">Actualizar</button>
-                <button class="cancel-btn">Borrar</button>
-            </div>
+        <form class="inline-form">
+          <div class="input-container">
+            <label for="codigo" class="input-container__label">Código</label>
+            <input
+              type="text"
+              name="codigo"
+              id="codigo"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="nomProducto" class="input-container__label"
+              >Nombre
+            </label>
+            <input
+              type="text"
+              name="nomProducto"
+              id="nomProducto"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="nitProveedor" class="input-container__label"
+              >Nit Proveedor
+            </label>
+            <input
+              type="text"
+              name="nitProveedor"
+              id="nitProveedor"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="precioCompra" class="input-container__label"
+              >Precio Compra
+            </label>
+            <input
+              type="text"
+              name="precioCompra"
+              id="precioCompra"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="ivaCompra" class="input-container__label"
+              >Iva compra
+            </label>
+            <input
+              type="text"
+              name="ivaCompra"
+              id="ivaCompra"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="precioVenta" class="input-container__label"
+              >Precio Venta</label
+            >
+            <input
+              type="text"
+              name="precioVenta"
+              id="precioVenta"
+              class="input-container__input"
+            />
+          </div>
+        </form>
+        <div class="buttons-container">
+          <button class="primary-btn">Consultar</button>
+          <button class="primary-btn">Crear</button>
+          <button class="primary-btn">Actualizar</button>
+          <button class="cancel-btn">Borrar</button>
         </div>
+      </div>
     </div>
-
-   
-</body>
-
+  </body>
 </html>

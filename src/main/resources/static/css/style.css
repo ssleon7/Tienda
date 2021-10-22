@@ -2,13 +2,14 @@
 @import url("buttons.css");
 @import url("navigation.css");
 @import url("variables.css");
+@import url("tabs.css");
+@import url("tables.css");
 body {
     background-color: var(--bg-gray);
 }
 
 .bg-img {
-    font-family: arial;
-    background-image: url('../img/fondo.png');
+    background-image: url("../img/fondo.png");
     background-size: cover;
     width: 100%;
     min-height: 100vh;
@@ -25,12 +26,14 @@ input {
 
 .center-content-column,
 .input-container,
-.form-container {
+.form-container,
+.custom-container {
     display: flex;
     flex-direction: column;
 }
 
 .form-container,
+.custom-container,
 .center-content-column {
     justify-content: center;
     align-items: center;
@@ -48,10 +51,10 @@ input {
     padding: 20px 30px;
     border-top: 4px solid var(--primary);
     color: white;
-    
 }
 
-.register-form {    
+.register-form,
+.custom-container {
     background-color: white;
     border-radius: 0 0 6px 6px;
     box-shadow: var(--sombra);
@@ -59,6 +62,11 @@ input {
     border-top: 4px solid var(--dark-primary);
     color: var(--custom-black);
     margin-top: 24px;
+}
+
+.custom-container {
+    margin-top: 0;
+    border-top: none;
 }
 
 .register-form .input-container {
@@ -92,7 +100,6 @@ input {
 }
 
 .register-form .input-container__input {
-    
     border: 1px solid var(--primary);
     background-color: white;
     color: var(--custom-black);
@@ -106,6 +113,13 @@ input {
     background-color: var(--custom-black);
     color: white;
     font-size: 16px;
+}
+
+.input-container__input:focus-within,
+.input-container__input:focus-visible,
+.input-container__input:focus {
+    outline: none !important;
+    box-shadow: 0 0 3px 1px var(--light-primary);
 }
 
 .header-back-button__link {
@@ -143,6 +157,13 @@ input {
 .header__container,
 .main-container {
     width: 80%;
+}
+
+.header__container {
     margin: 0 auto;
     padding-top: 24px;
+}
+
+.main-container {
+    margin: 24px auto 0 auto;
 }

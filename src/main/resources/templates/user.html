@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>MenUsuaios</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Usuarios</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
@@ -13,52 +13,82 @@
         <div class="header__container">
             <div class="header__content">
                 <div class="header-back-button">
-                    <a href="menu" class="header-back-button__link"><span class="material-icons">
-                            arrow_back_ios
-                        </span>Regresar</a>
-                    <h1>Gestión de usuarios</h1>
-                </div>
-            </div>
+                    <a href="menu" class="header-back-button__link"><span class="material-icons"> arrow_back_ios </span>Menú
+              principal</a
+            >
+            <h1>Gestión de usuarios</h1>
+          </div>
         </div>
+      </div>
     </header>
     <div class="main-container">
-        <div class="register-form">
-            <h1>Registro</h1>
-            <p>Complete la siguiente información para realizar la creación de un usuario.</p>
+      <div class="register-form">
+        <h1>Registro</h1>
+        <p>
+          Complete la siguiente información para realizar la creación de un
+          usuario.
+        </p>
 
-            <form class="inline-form">
-                <div class="input-container">
-                    <label for="cedula" class="input-container__label">Cédula</label>
-                    <input type="text" name="cedula" id="cedula" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="fullName" class="input-container__label">Nombre completo</label>
-                    <input type="text" name="fullName" id="fullName" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="userEmail" class="input-container__label">Correo electrónico
-                    </label>
-                    <input type="text" name="userEmail" id="userEmail" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="userName" class="input-container__label">Usuario </label>
-                    <input type="text" name="userName" id="userName" class="input-container__input" />
-                </div>
-                <div class="input-container">
-                    <label for="pass" class="input-container__label">Contraseña </label>
-                    <input type="text" name="pass" id="pass" class="input-container__input" />
-                </div>
-            </form>
-            <div class="buttons-container">
-                <button class="primary-btn">Consultar</button>
-                <button class="primary-btn">Crear</button>
-                <button class="primary-btn">Actualizar</button>
-                <button class="cancel-btn">Borrar</button>
-            </div>
+        <form class="inline-form">
+          <div class="input-container">
+            <label for="cedula" class="input-container__label">Cédula</label>
+            <input
+              type="text"
+              name="cedula"
+              id="cedula"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="fullName" class="input-container__label"
+              >Nombre completo</label
+            >
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="userEmail" class="input-container__label"
+              >Correo electrónico
+            </label>
+            <input
+              type="text"
+              name="userEmail"
+              id="userEmail"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="userName" class="input-container__label"
+              >Usuario
+            </label>
+            <input
+              type="text"
+              name="userName"
+              id="userName"
+              class="input-container__input"
+            />
+          </div>
+          <div class="input-container">
+            <label for="pass" class="input-container__label">Contraseña </label>
+            <input
+              type="text"
+              name="pass"
+              id="pass"
+              class="input-container__input"
+            />
+          </div>
+        </form>
+        <div class="buttons-container">
+          <button class="primary-btn">Consultar</button>
+          <button class="primary-btn">Crear</button>
+          <button class="primary-btn">Actualizar</button>
+          <button class="cancel-btn">Borrar</button>
         </div>
+      </div>
     </div>
-
-   
-</body>
-
+  </body>
 </html>
