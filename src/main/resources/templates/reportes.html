@@ -2,144 +2,192 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Reportes</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <title>Reportes</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__container">
-            <div class="header__content">
-                <div class="header-back-button">
-                    <a href="menu" class="header-back-button__link"><span class="material-icons"> arrow_back_ios </span>Menú
-              principal</a
-            >
-            <h1>Reportes</h1>
-          </div>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__content">
+        <div class="header-back-button">
+          <a href="menu" class="header-back-button__link"><span class="material-icons"> arrow_back_ios </span>Menú
+            principal</a>
+          <h1>Reportes</h1>
         </div>
       </div>
-    </header>
-    <div class="main-container">
-      <div class="tab-column">
-        <input type="radio" name="tab" id="tab-1" checked />
-        <label for="tab-1" class="tab-title">Listado de usuarios</label>
-        <input type="radio" name="tab" id="tab-2" />
-        <label for="tab-2" class="tab-title">Listado de clientes</label>
-        <input type="radio" name="tab" id="tab-3" />
-        <label for="tab-3" class="tab-title">Ventas por cliente</label>
+    </div>
+  </header>
+  <div class="main-container">
+    <div class="tab-column">
+      <input type="radio" name="tab" id="tab-1" checked />
+      <label for="tab-1" class="tab-title">Listado de usuarios</label>
+      <input type="radio" name="tab" id="tab-2" />
+      <label for="tab-2" class="tab-title">Listado de clientes</label>
+      <input type="radio" name="tab" id="tab-3" />
+      <label for="tab-3" class="tab-title">Ventas por cliente</label>
 
-        <div class="tab-content custom-container">
-          <div class="tab_content tab-1">
-            <p class="tab-description">
-              Este es el listado de usuarios que se encuentran registrados en su
-              tienda
-            </p>
-            <table class="table">
-              <thead>
-                <tr class="table__header">
-                  <th class="table__header-item">Cédula</th>
-                  <th class="table__header-item">Nombre</th>
-                  <th class="table__header-item">Correo electrónico</th>
-                  <th class="table__header-item">Usuario</th>
-                  <th class="table__header-item">Password</th>
-                </tr>
-              </thead>
-              <tbody class="table__body">
-                <tr>
-                  <td class="table__body-item">Alfreds Futterkiste</td>
-                  <td class="table__body-item">Maria Anders</td>
-                  <td class="table__body-item">Germany</td>
-                  <td class="table__body-item">Germany</td>
-                  <td class="table__body-item">Germany</td>
-                </tr>
-                <tr>
-                  <td class="table__body-item">Centro comercial Moctezuma</td>
-                  <td class="table__body-item">Francisco Chang</td>
-                  <td class="table__body-item">Mexico</td>
-                  <td class="table__body-item">Mexico</td>
-                  <td class="table__body-item">Mexico</td>
-                </tr>
-                <tr>
-                  <td class="table__body-item">Ernst Handel</td>
-                  <td class="table__body-item">Roland Mendel</td>
-                  <td class="table__body-item">Austria</td>
-                  <td class="table__body-item">Austria</td>
-                  <td class="table__body-item">Austria</td>
-                </tr>
-                <tr>
-                  <td class="table__body-item">Island Trading</td>
-                  <td class="table__body-item">Helen Bennett</td>
-                  <td class="table__body-item">UK</td>
-                  <td class="table__body-item">UK</td>
-                  <td class="table__body-item">UK</td>
-                </tr>
-                <tr>
-                  <td class="table__body-item">Laughing Bacchus Winecellars</td>
-                  <td class="table__body-item">Yoshi Tannamuri</td>
-                  <td class="table__body-item">Canada</td>
-                  <td class="table__body-item">Canada</td>
-                  <td class="table__body-item">Canada</td>
-                </tr>
-                <tr>
-                  <td class="table__body-item">Magazzini Alimentari Riuniti</td>
-                  <td class="table__body-item">Giovanni Rovelli</td>
-                  <td class="table__body-item">Italy</td>
-                  <td class="table__body-item">Italy</td>
-                  <td class="table__body-item">Italy</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="tab_content tab-2">
-            <h1>Contenido 2</h1>
-          </div>
-          <div class="tab_content tab-3">
-            <h1>Contenido 3</h1>
+      <div class="tab-content custom-container">
+        <div class="tab_content tab-1">
+          <p class="tab-description">
+            Este es el listado de usuarios que se encuentran registrados en su
+            tienda
+          </p>
+          <table class="table">
+            <thead>
+              <tr class="table__header">
+                <th class="table__header-item">Cédula</th>
+                <th class="table__header-item">Nombre</th>
+                <th class="table__header-item">Correo electrónico</th>
+                <th class="table__header-item">Usuario</th>
+                <th class="table__header-item">Password</th>
+              </tr>
+            </thead>
+            <tbody class="table__body">
+              <tr>
+                <td class="table__body-item">10184230</td>
+                <td class="table__body-item">Juan Perez</td>
+                <td class="table__body-item">juanito@gmail.com</td>
+                <td class="table__body-item">jperez</td>
+                <td class="table__body-item">Contraseña</td>
+              </tr>
+              <tr>
+                <td class="table__body-item">100064285</td>
+                <td class="table__body-item">Miguel Moreno</td>
+                <td class="table__body-item">mmoreno@hotmail.com</td>
+                <td class="table__body-item">miguelin</td>
+                <td class="table__body-item">Password</td>
+              </tr>
+              <tr>
+                <td class="table__body-item">1012336654</td>
+                <td class="table__body-item">Valentina Conde</td>
+                <td class="table__body-item">valeconde10@outlook.com</td>
+                <td class="table__body-item">valenConde</td>
+                <td class="table__body-item">1234</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="tab_content tab-2">
+          <p class="tab-description">
+            Este es el listado de usuarios que se encuentran registrados en su
+            tienda
+          </p>
+          <table class="table">
+            <thead>
+              <tr class="table__header">
+                <th class="table__header-item">Cédula</th>
+                <th class="table__header-item">Nombre</th>
+                <th class="table__header-item">Correo electrónico</th>
+                <th class="table__header-item">Telefono</th>
+                <th class="table__header-item">Direccion</th>
+              </tr>
+            </thead>
+            <tbody class="table__body">
+              <tr>
+                <td class="table__body-item">10184230</td>
+                <td class="table__body-item">Juan Perez</td>
+                <td class="table__body-item">juanito@gmail.com</td>
+                <td class="table__body-item">3174569588</td>
+                <td class="table__body-item">Calle 25 #23-69</td>
+              </tr>
+              <tr>
+                <td class="table__body-item">100064285</td>
+                <td class="table__body-item">Miguel Moreno</td>
+                <td class="table__body-item">mmoreno@hotmail.com</td>
+                <td class="table__body-item">3156321247</td>
+                <td class="table__body-item">Avenida Siempre Viva 742</td>
+              </tr>
+              <tr>
+                <td class="table__body-item">1012336654</td>
+                <td class="table__body-item">Valentina Conde</td>
+                <td class="table__body-item">valeconde10@outlook.com</td>
+                <td class="table__body-item">3005102356</td>
+                <td class="table__body-item">Carera 80 #69-50</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab_content tab-3">
+          <p class="tab-description">
+            Este es el listado del total de ventas en su
+            tienda
+          </p>
+          <table class="table">
+            <thead>
+              <tr class="table__header">
+                <th class="table__header-item">Cédula</th>
+                <th class="table__header-item">Nombre</th>
+                <th class="table__header-item">Valor Total Ventas</th>
+              </tr>
+            </thead>
+            <tbody class="table__body">
+              <tr>
+                <td class="table__body-item">10184230</td>
+                <td class="table__body-item">Juan Perez</td>
+                <td class="table__body-item">50.000</td>
+              </tr>
+              <tr>
+                <td class="table__body-item">100064285</td>
+                <td class="table__body-item">Miguel Moreno</td>
+                <td class="table__body-item">100.000</td>
+              </tr>
+              <tr>
+                <td class="table__body-item">1012336654</td>
+                <td class="table__body-item">Valentina Conde</td>
+                <td class="table__body-item">265.200</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 10px; margin-left: 700px;">            
+            <button class="primary-btn" disabled>Total Ventas $415.200</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script
-      src="../static/js/csvProviders.js"
-      th:src="@{/js/csvProviders.js}"
-    ></script>
-    <script>
-      var singleUploadForm = document.querySelector("#singleUploadForm");
-      var singleFileUploadInput = document.querySelector(
-        "#singleFileUploadInput"
-      );
-      var singleFileUploadError = document.querySelector(
-        "#singleFileUploadError"
-      );
-      var singleFileUploadSuccess = document.querySelector(
-        "#singleFileUploadSuccess"
-      );
+  <script src="../static/js/csvProviders.js" th:src="@{/js/csvProviders.js}"></script>
+  <script>
+    var singleUploadForm = document.querySelector("#singleUploadForm");
+    var singleFileUploadInput = document.querySelector(
+      "#singleFileUploadInput"
+    );
+    var singleFileUploadError = document.querySelector(
+      "#singleFileUploadError"
+    );
+    var singleFileUploadSuccess = document.querySelector(
+      "#singleFileUploadSuccess"
+    );
 
-      function uploadSingleFile(file) {
-        var formData = new FormData();
-        formData.append("file", file);
+    function uploadSingleFile(file) {
+      var formData = new FormData();
+      formData.append("file", file);
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/api/csv/upload");
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/api/csv/upload");
 
-        xhr.onload = function () {
-          console.log(xhr.responseText);
-          var response = JSON.parse(xhr.responseText);
-          if (xhr.status == 200) {
-            singleFileUploadError.style.display = "none";
-            singleFileUploadSuccess.innerHTML =
-              "<p>File Uploaded Successfully.</p><p>DownloadUrl : <a href='" +
-              response.fileDownloadUri +
-              "' target='_blank'>" +
-              response.fileDownloadUri +
-              "</a></p>"; singleFileUploadSuccess.style.display = "block"; } else { singleFileUploadSuccess.style.display = "none"; singleFileUploadError.innerHTML = "
-                    <p>" + (response && response.message) + "
-                        <p>" || "Some Error Occurred"; singleFileUploadSuccess.style.display = "block"; } }; xhr.send(formData); } singleUploadForm.addEventListener( "submit", function (event) { var files = singleFileUploadInput.files; if (files.length ===
-                            0) { singleFileUploadError.innerHTML = "Please select a file"; singleFileUploadError.style.display = "block"; } uploadSingleFile(files[0]); event.preventDefault(); }, true );
-                            </script>
+      xhr.onload = function () {
+        console.log(xhr.responseText);
+        var response = JSON.parse(xhr.responseText);
+        if (xhr.status == 200) {
+          singleFileUploadError.style.display = "none";
+          singleFileUploadSuccess.innerHTML =
+            "<p>File Uploaded Successfully.</p><p>DownloadUrl : <a href='" +
+            response.fileDownloadUri +
+            "' target='_blank'>" +
+            response.fileDownloadUri +
+            "</a></p>"; singleFileUploadSuccess.style.display = "block";
+        } else {
+          singleFileUploadSuccess.style.display = "none"; singleFileUploadError.innerHTML = "
+            < p > " + (response && response.message) + "
+            < p > " || "Some Error Occurred"; singleFileUploadSuccess.style.display = "block"; } }; xhr.send(formData); } singleUploadForm.addEventListener( "submit", function (event) { var files = singleFileUploadInput.files; if (files.length ===
+          0) { singleFileUploadError.innerHTML = "Please select a file"; singleFileUploadError.style.display = "block"; } uploadSingleFile(files[0]); event.preventDefault();
+        }, true );
+  </script>
 </body>
 
 </html>
